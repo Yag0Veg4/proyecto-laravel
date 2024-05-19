@@ -86,6 +86,7 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
+        Session()->flash('sucess', 'Se ha eliminado co éxito');
         return redirect('/comic');
     }
 }
